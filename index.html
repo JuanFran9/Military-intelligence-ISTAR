@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGIIC ISTAR MVP</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Incluir CSS de Leaflet sin los atributos de integridad -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <!-- Incluir JS de Leaflet sin los atributos de integridad -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+      <h1>ISTAR</h1>
+    </header>
+    <div id="map-container">
+        <!-- El mapa de Leaflet se cargará aquí -->
+    </div>
+
+    <!-- Puedes agregar más elementos de UI aquí según sea necesario -->
+
+
+    <div id="controls">
+      <label><input type="checkbox" id="toggle-markers" checked> Sensores</label><br>
+      <label><input type="checkbox" id="toggle-circles" checked> Radio de sensores</label>
+      <!-- Añade más controles según sea necesario -->
+      <button onclick="fetchSensorData()">Actualizar Localizacion de Sensores</button>
+      <button onclick="fetchPlaneData()">Actualizar Localizacion de Aviones</button>
+    </div>
+    <div id="main-container">
+      <div id="planes-container">
+          <h2>Aviones Cercanos (selecciona un objetivo en el mapa)</h2>
+          <ul id="planes-list"></ul>
+      </div>
+      <div id="alert-container">
+          <h2>Alertas</h2>
+          <div id="alert-messages"></div>
+      </div>
+   </div>
+
+
+
+    <script src="mapSetup.js"></script>
+    <script src="sensorManagement.js"></script>
+    <script src="userInteractions.js"></script>
+    <script src="planesManagement.js"></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+</html>
